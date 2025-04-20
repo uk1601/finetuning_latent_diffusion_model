@@ -336,8 +336,8 @@ The implementation employs several memory optimization techniques to enable trai
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/dina-fdu/flickr30k-model.git
-   cd flickr30k-model
+   git clone https://github.com/uk1601/finetuning_latent_diffusion_model.git
+   cd finetuning_latent_diffusion_model
    ```
 
 2. **Create and activate a virtual environment**:
