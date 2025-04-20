@@ -22,8 +22,7 @@ hf_xet
 # Backend
 fastapi
 uvicorn[standard] # Includes standard dependencies like httptools, websockets
-pydantic # Often needed implicitly by FastAPI
-
+pydantic 
 # Frontend
 streamlit
 requests # For frontend to call backend
@@ -33,4 +32,3 @@ requests # For frontend to call backend
 bitsandbytes # Only if you fix the install for GPU
 scipy
 ftfy
-# Other dependencies...
