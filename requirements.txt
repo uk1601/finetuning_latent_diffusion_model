@@ -4,7 +4,7 @@ numpy
 transformers
 scikit-learn
 huggingface_hub
-accelerate>=0.26.0
+accelerate
 matplotlib
 tiktoken
 tensorflow
@@ -16,3 +16,21 @@ diffusers[torch]
 Pillow
 tqdm
 datasets
+hf_xet
+
+
+# Backend
+fastapi
+uvicorn[standard] # Includes standard dependencies like httptools, websockets
+pydantic # Often needed implicitly by FastAPI
+
+# Frontend
+streamlit
+requests # For frontend to call backend
+
+
+# Optional (if needed by specific models or features)
+bitsandbytes # Only if you fix the install for GPU
+scipy
+ftfy
+# Other dependencies...

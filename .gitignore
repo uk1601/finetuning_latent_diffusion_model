@@ -1,3 +1,10 @@
 checkpoints/
 env_final/
 fine_tuned_model/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite

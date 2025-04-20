@@ -1,0 +1,190 @@
+/* styles.css - Apple Inspired Theme */
+
+/* --- General --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #ffffff; /* Light gray background */
+    color: #1d1d1f; /* Primary text color (dark gray) */
+}
+
+/* --- Layout Containers --- */
+/* Main content area */
+.main .block-container {
+    padding-top: 2rem; /* Add some space at the top */
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Style block containers within columns for a card-like feel */
+[data-testid="stVerticalBlock"] > [style*="flex-direction: column;"] > [data-testid="stVerticalBlock"] {
+     background-color: #ffffff; /* White background for cards */
+     border: 1px solid #d2d2d7; /* Subtle border (system gray 3) */
+     border-radius: 10px; /* Rounded corners */
+     padding: 1.5rem;
+     box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Very subtle shadow */
+     margin-bottom: 1rem; /* Space below cards */
+}
+
+
+/* --- Sidebar --- */
+[data-testid="stSidebar"] {
+    background-color: #ffffff; /* White sidebar */
+    border-right: 1px solid #d2d2d7; /* Border separating sidebar */
+    padding: 1.5rem;
+}
+[data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 {
+    color: #1d1d1f;
+}
+
+/* --- Headers --- */
+h1 {
+    color: #1d1d1f;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+h2 {
+    color: #1d1d1f;
+    font-weight: 600;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+h3 {
+     color: #1d1d1f;
+     font-weight: 600;
+     margin-top: 1rem;
+     margin-bottom: 0.5rem;
+}
+h5 { /* Used for model titles above images */
+    color: #515154; /* Secondary text (darker gray) */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+
+/* --- Buttons --- */
+/* Style the main generate button inside the form */
+div[data-testid="stForm"] button[kind="primary"] {
+    background-color: #007AFF; /* Apple Blue */
+    color: rgb(11, 14, 210);
+    border: none;
+    padding: 0.6rem 1.2rem; /* Slightly adjusted padding */
+    border-radius: 8px; /* Rounded corners */
+    font-weight: 500; /* Medium weight */
+    width: 100%; /* Make button full width within form */
+    margin-top: 1rem;
+    transition: background-color 0.2s ease; /* Smooth hover */
+}
+div[data-testid="stForm"] button[kind="primary"]:hover {
+    background-color: #005ecb; /* Darker blue on hover */
+}
+div[data-testid="stForm"] button[kind="primary"]:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3); /* Subtle blue focus ring */
+}
+
+
+/* Style download buttons */
+div[data-testid="stDownloadButton"] button {
+    background-color: #f0f0f0; /* Light gray button */
+    color: #007AFF; /* Blue text */
+    border: 1px solid #d2d2d7; /* Subtle border */
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+    margin-top: 0.75rem; /* Add space above download button */
+    width: 100%; /* Make download button full width */
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+div[data-testid="stDownloadButton"] button:hover {
+    background-color: #e5e5e5; /* Slightly darker gray on hover */
+}
+div[data-testid="stDownloadButton"] button:focus {
+     outline: none;
+     box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3); /* Subtle blue focus ring */
+}
+
+
+/* --- Form/Input Styling --- */
+[data-testid="stForm"] {
+    border: none; /* Remove default form border */
+    border-radius: 0;
+    padding: 0; /* Remove default form padding */
+    background-color: transparent; /* Ensure form bg is transparent */
+}
+
+/* Style text area */
+[data-testid="stTextArea"] textarea {
+    border-radius: 8px;
+    border: 1px solid #d2d2d7;
+    background-color: #000000;
+}
+[data-testid="stTextArea"] textarea:focus {
+    border-color: #007AFF;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3);
+}
+
+/* Style multiselect / selectbox */
+[data-testid="stMultiSelect"], [data-testid="stSelectbox"] {
+     border-radius: 8px;
+}
+/* You might need more specific selectors depending on Streamlit version for dropdowns etc. */
+
+
+/* Customize expander */
+[data-testid="stExpander"] summary {
+    font-weight: 500; /* Medium weight */
+    color: #ff0000;
+    border-radius: 8px; /* Rounded corners for expander header */
+}
+[data-testid="stExpander"] summary:hover {
+    background-color: #000000; /* Subtle hover on expander */
+}
+[data-testid="stExpander"] {
+     border: 1px solid #000000; /* Border around expander */
+     border-radius: 8px;
+     background-color: #000000; /* White background inside expander */
+     margin-top: 1rem;
+}
+
+
+/* --- Output Area --- */
+/* Style the columns holding results */
+div.stColumn {
+   padding: 0 10px; /* Add some spacing between columns */
+}
+
+/* Generated image styling */
+[data-testid="stImage"] {
+    display: flex; /* Helps center caption if needed */
+    flex-direction: column;
+    align-items: center;
+}
+[data-testid="stImage"] img {
+    border: 1px solid #000000; /* Lighter border */
+    border-radius: 8px; /* Match corner radius */
+    padding: 0; /* Remove padding around image itself */
+    /* background-color: white; /* Removed, let transparency work */
+    max-width: 100%; /* Ensure image fits column */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 0.5rem; /* Space between image and caption/button */
+}
+
+/* Style the caption below the image */
+[data-testid="stImage"] > div[data-testid="stCaptionContainer"] {
+    font-size: 0.85rem;
+    color: #ff0000; /* System gray */
+    text-align: center;
+}
+
+/* --- Alert/Info Boxes --- */
+[data-testid="stAlert"] {
+    border-radius: 8px; /* Rounded corners for alerts */
+    padding: 1rem;
+}
+[data-testid="stSpinner"] > div {
+     /* Style spinner if desired, e.g., make it blue */
+     /* border-top-color: #007AFF; */
+}
